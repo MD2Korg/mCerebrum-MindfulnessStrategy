@@ -22,10 +22,11 @@ import org.md2k.utilities.dialog.Dialog;
 import org.md2k.utilities.dialog.DialogCallback;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class ActivityStrategy extends Activity {
-    private static final long WAIT_LIMIT = 10 * 1000L;//5*60*1000L;
-    private static final long QUIT_LIMIT = 10 * 1000L;//5*60*1000L;
+    private static final long WAIT_LIMIT = 5*60 * 1000L;//5*60*1000L;
+    private static final long QUIT_LIMIT = 30 * 1000L;//5*60*1000L;
     CategoryManager categoryManager;
     Category category;
     Strategy strategy;
@@ -36,25 +37,38 @@ public class ActivityStrategy extends Activity {
     MaterialDialog materialDialog;
     DataKitManager dataKitManager;
     DataManager dataManager;
+    boolean isDoNothing=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        trigger_type = getIntent().getStringExtra("trigger_type");
+        if(!trigger_type.equals("USER")){
+            Random random=new Random();
+            int v = random.nextInt(2);
+            if(v==1) isDoNothing=true;
+        }
         try {
-            setContentView(R.layout.activity_strategy);
-            materialDialog= new Dialog().ProgressIndeterminate(this, null,"Loading...").build();
-            materialDialog.show();
-            trigger_type = getIntent().getStringExtra("trigger_type");
-            categoryManager = new CategoryManager(this);
-            handler = new Handler();
+            if(isDoNothing) {
+                setContentView(R.layout.activity_strategy);
+                materialDialog = new Dialog().ProgressIndeterminate(this, null, "Loading...").build();
+                materialDialog.show();
+                categoryManager = new CategoryManager(this);
+                handler = new Handler();
+            }
             dataKitManager=new DataKitManager(this);
             dataKitManager.connect(new OnConnectionListener() {
                 @Override
                 public void onConnected() {
                     try {
                         prepareValue();
-                        prepareUI();
-                        materialDialog.dismiss();
+                        if(isDoNothing) {
+                            dataManager.add("SELECTED_STRATEGY", "NOTHING", null);
+                            quit();
+                        }else {
+                            prepareUI();
+                            materialDialog.dismiss();
+                        }
                     } catch (DataKitException e) {
                         quit();
                     }
