@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMain">
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Practice Mindfulness Strategies"
+        android:id="@+id/text_view_message"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/lightgreen_900" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_different"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:text="Would you like a different strategy than the one you see here?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_no"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_gravity="center_horizontal|center"
+                android:text="No"
+                android:layout_width="match_parent" />
+            <Button
+                android:id="@+id/button_yes"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:text="Yes"
+                android:layout_width="match_parent" />
+
+        </LinearLayout>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_same"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_not_complete"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_gravity="center_horizontal|center"
+                android:text="I did not complete the strategy"
+                android:layout_width="match_parent" />
+            <Button
+                android:id="@+id/button_complete"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:text="I completed the strategy"
+                android:layout_width="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_likert"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:numStars="5"
+            android:stepSize="1"
+            />
+        <Button
+            android:id="@+id/button_close"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Close"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</LinearLayout>

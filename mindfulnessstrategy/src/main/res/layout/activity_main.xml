@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ActivityMain">
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Practice Mindfulness Strategies"
+        android:id="@+id/textView"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Send me a mindfulness strategy to practice!"
+        android:id="@+id/button_practice"
+        android:gravity="center_vertical" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="I clicked the wrong button. Take me back to the home screen"
+        android:id="@+id/button_exit"
+        android:gravity="center_vertical" />
+
+
+</LinearLayout>
