@@ -7,7 +7,11 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class ActivityFaq extends Activity {
+
+    FancyButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,15 @@ public class ActivityFaq extends Activity {
         wv1.getSettings().setJavaScriptEnabled(true);
         wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         wv1.loadUrl("file:///android_asset/faq.html");
+
+
+        back = (FancyButton) findViewById(R.id.button_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
     private class MyBrowser extends WebViewClient {
         @Override
