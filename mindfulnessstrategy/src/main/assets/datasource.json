@@ -1,0 +1,72 @@
+{
+  "id": "Mindfulness",
+  "list":
+  [
+    {
+      "type": "MINDFULNESS",
+      "id":"SMOKING",
+        "application": {
+          "id": "org.md2k.mindfulnessstrategy",
+          "metadata": {
+            "NAME": "Mindfulness Strategy",
+            "DESCRIPTION": "Application to provide intervention"
+          }
+        },
+        "persistent": true,
+        "platform": {
+          "metadata": {
+            "NAME": "Phone"
+          },
+          "type": "PHONE"
+        },
+        "metadata": {
+          "DATA_TYPE": "org.md2k.datakitapi.datatype.DataTypeJSONObject",
+          "NAME": "Smoking triggered mindfulness"
+        }
+      },
+    {
+      "type": "MINDFULNESS",
+      "id":"STRESS",
+      "application": {
+        "id": "org.md2k.mindfulnessstrategy",
+        "metadata": {
+          "NAME": "Mindfulness Strategy",
+          "DESCRIPTION": "Application to provide intervention"
+        }
+      },
+      "persistent": true,
+      "platform": {
+        "metadata": {
+          "NAME": "Phone"
+        },
+        "type": "PHONE"
+      },
+      "metadata": {
+        "DATA_TYPE": "org.md2k.datakitapi.datatype.DataTypeJSONObject",
+        "NAME": "Smoking triggered mindfulness"
+      }
+    },
+    {
+      "type": "MINDFULNESS",
+      "id":"USER",
+      "application": {
+        "id": "org.md2k.mindfulnessstrategy",
+        "metadata": {
+          "NAME": "Mindfulness Strategy",
+          "DESCRIPTION": "Application to provide intervention"
+        }
+      },
+      "persistent": true,
+      "platform": {
+        "metadata": {
+          "NAME": "Phone"
+        },
+        "type": "PHONE"
+      },
+      "metadata": {
+        "DATA_TYPE": "org.md2k.datakitapi.datatype.DataTypeJSONObject",
+        "NAME": "Smoking triggered mindfulness"
+      }
+    }
+  ]
+}

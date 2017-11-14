@@ -26,33 +26,32 @@ package org.md2k.mindfulnessstrategy;
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
 
-import org.md2k.datakitapi.exception.DataKitException;
-import org.md2k.datakitapi.messagehandler.OnConnectionListener;
-import org.md2k.mindfulnessstrategy.datakit.DataKitManager;
+import org.md2k.mcerebrum.commons.permission.ActivityPermission;
+import org.md2k.mcerebrum.commons.permission.Permission;
+import org.md2k.mcerebrum.core.access.MCerebrum;
+import org.md2k.mcerebrum.core.access.MCerebrumInfo;
 
-public class ActivityAccess extends AppCompatActivity{
-/*
-    DataKitManager dataKitManager;
+public class MyMCerebrumInit extends MCerebrumInfo {
     @Override
-    public boolean prepare() {
-        dataKitManager=new DataKitManager(this);
-        try {
-            dataKitManager.connect(new OnConnectionListener() {
-                @Override
-                public void onConnected() {
-                    try {
-                        dataKitManager.registerAll();
-                        dataKitManager.disconnect();
-                    } catch (DataKitException ignored) {
-                    }
-                }
-            });
-        } catch (DataKitException e) {
-            e.printStackTrace();
+    public void update(final Context context){
+        if(!Permission.hasPermission(context)){
+            Intent intent = new Intent(context, ActivityPermission.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
         }
-        return false;
-    }
+/*
+        if(!MCerebrum.getPermission(context)){
+            if(Permission.hasPermission(context))
+                MCerebrum.setPermission(context, true);
+            else{
+                Intent intent = new Intent(context, ActivityPermission.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        }
 */
+    }
 }

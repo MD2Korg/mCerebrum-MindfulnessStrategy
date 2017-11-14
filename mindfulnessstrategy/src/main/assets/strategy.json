@@ -1,0 +1,513 @@
+{
+  "categories": [
+    {
+      "id": "breath",
+      "strategies": [
+        {
+          "id": "For the next 3 minutes, 1) pay attention to what you're experiencing now, 2) focus on your breathing, 3) shift your awareness to your entire body.",
+          "rating": 5
+        },
+        {
+          "id": "Try to STOP: Stop; Take a breath; Observe what is happening right now; Proceed with your day",
+          "rating": 5
+        },
+        {
+          "id": "As you breathe in and out over the next several moments, consider telling yourself:\"Breathing in, I know I am breathing in. Breathing out, I know I am breathing out.\"",
+          "rating": 5
+        },
+        {
+          "id": "For the next 2 minutes, focus only on your breathing. If your mind wanders to something else, simply return your focus to your breathing.",
+          "rating": 5
+        },
+        {
+          "id": "Take a few moments to notice your breathing. Just focus on your breathing; don't try to change anything.",
+          "rating": 5
+        },
+        {
+          "id": "Allow yourself a couple of minutes to just focus on your breathing in this moment.",
+          "rating": 5
+        },
+        {
+          "id": "Pause and take a few deep breaths. Notice how the air moves in and out of your nose as you breathe.",
+          "rating": 5
+        },
+        {
+          "id": "Become aware of your breathing and where you feel it the most at this moment (nose, chest, stomach). Pay attention to this particular area as you breathe.",
+          "rating": 5
+        },
+        {
+          "id": "Turn your attention to your breathing. Notice where you feel your breathing most in your body.",
+          "rating": 5
+        },
+        {
+          "id": "As you breathe, notice how the air feels coming in and out of your nose. Focus on this experience for the next several minutes.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "thoughts",
+      "strategies": [
+        {
+          "id": "It is very easy for our minds to wander or daydream. In the next few moments, pay attention to any thoughts that come into your mind.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if your thoughts feel like a command to do or feel something. Observe them simply as words put together in a sentence, and not a command.",
+          "rating": 5
+        },
+        {
+          "id": "Over the next several moments, notice any thoughts that come into your mind. Try to just observe them.",
+          "rating": 5
+        },
+        {
+          "id": "Observe any thoughts you're having right now. Watch them go by, just as leaves float down a stream of water - they just come and go.",
+          "rating": 5
+        },
+        {
+          "id": "Allow yourself to notice what thoughts are going through your mind right now. As you do this, observe your thoughts as just thoughts, and nothing else.",
+          "rating": 5
+        },
+        {
+          "id": "Notice any thoughts you're having in this moment, and watch them go by as if they are clouds in the sky.",
+          "rating": 5
+        },
+        {
+          "id": "Take a moment to notice what thoughts were just going through your mind. Just observe these thoughts as they continue to come and go.",
+          "rating": 5
+        },
+        {
+          "id": "Thoughts come and go from moment to moment. Notice how your thoughts are shifting right now and whether you want to follow them.",
+          "rating": 5
+        },
+        {
+          "id": "Sometimes thoughts pop into our heads automatically. Notice any thoughts that pop into your head over the next several moments.",
+          "rating": 5
+        },
+        {
+          "id": "Our thoughts change each moment. Notice how quickly your thoughts may shift around over the next several minutes.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "sensations",
+      "strategies": [
+        {
+          "id": "For the next few minutes, be aware of what you're seeing around you. Notice the colors and textures of what you see.",
+          "rating": 5
+        },
+        {
+          "id": "Notice any smells in your environment right now. For the next few moments, pay attention to these smells.",
+          "rating": 5
+        },
+        {
+          "id": "Pause for a moment and notice your body. Perhaps take a few stretches with your arms and legs, and notice how this feels.",
+          "rating": 5
+        },
+        {
+          "id": "In the next several moments, take a walk and notice the sensations you feel in your body as you step.",
+          "rating": 5
+        },
+        {
+          "id": "Emotions can change from moment to moment. Notice how you're feeling right now.",
+          "rating": 5
+        },
+        {
+          "id": "Shift your attention to what you see around you. Be aware of the colors, shapes, textures, and shadows for the next several moments.",
+          "rating": 5
+        },
+        {
+          "id": "Notice the physical feelings in your body right now. Do you feel tension or relaxation? Consider doing some simple stretches as your focus on your body.",
+          "rating": 5
+        },
+        {
+          "id": "Notice any sounds you're hearing right now. Are they loud or soft? Far away or close?",
+          "rating": 5
+        },
+        {
+          "id": "What are you feeling emotionally right now? Notice what this feels like in your body for the next few minutes.",
+          "rating": 5
+        },
+        {
+          "id": "Take a moment a notice what you're hearing right now. Listen for the next 2 minutes.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "acceptance",
+      "strategies": [
+        {
+          "id": "Be present with what is happening right now, without trying to change anything (for example, your thoughts or mood).",
+          "rating": 5
+        },
+        {
+          "id": "Events in our lives aren't necessarily good or bad. Notice if you can suspend judgment.",
+          "rating": 5
+        },
+        {
+          "id": "Watch your thoughts and experience your emotions without judging them as right or wrong.",
+          "rating": 5
+        },
+        {
+          "id": "Try to let go of labeling things as good or bad. Be present with what is happening and suspend judgment.",
+          "rating": 5
+        },
+        {
+          "id": "Try letting your current experience be, without calling it good or bad.",
+          "rating": 5
+        },
+        {
+          "id": "Sometimes we want things to be different than they are, as we often categorize our experiences as good or bad. Try not to judge things right now - just let the experience be as it is.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you are judging your current experience as good or bad. Try letting this moment be, without labeling it.",
+          "rating": 5
+        },
+        {
+          "id": "We don't have to judge everything as right or wrong. Try letting things be without labeling them.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you want things to be different than they are right now. Try to be present, without trying to change anything.",
+          "rating": 5
+        },
+        {
+          "id": "If possible, let go of any judgments that are good or bad right now.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "craving_pre",
+      "strategies": [
+        {
+          "id": "Begin to notice what it feels like in your body when you have a craving for a cigarette. Notice where you feel the craving in your body.",
+          "rating": 5
+        },
+        {
+          "id": "Whenever you have a craving to smoke, think of the craving like a wave in the ocean - it will come and go over time.",
+          "rating": 5
+        },
+        {
+          "id": "Notice how the clouds in the sky are constantly moving and never stay in the same place. Cravings are similar - they come and go.",
+          "rating": 5
+        },
+        {
+          "id": "For the next few moments, notice any sensations in your body that may be similar to craving a cigarette. Describe these feelings to yourself, and know that it is ok to feel these sensations.",
+          "rating": 5
+        },
+        {
+          "id": "Be aware of what you tell yourself when you have a craving to smoke. Try not to judge these moments as good or bad.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you're having any feelings in your body that are similar to a craving for a cigarette. Be aware of these sensations.",
+          "rating": 5
+        },
+        {
+          "id": "For the next several moments, be aware of any sensations in your body that are similar to when you crave a cigarette. Just notice these sensations. You don't have to do anything with them.",
+          "rating": 5
+        },
+        {
+          "id": "When you have a smoking urge, try to \"surf\" it. This means to be aware of the urge to smoke a cigarette, while also knowing that it will come and go just like a wave in the ocean.",
+          "rating": 5
+        },
+        {
+          "id": "Notice any thoughts you've had about smoking a cigarette. Be aware that our thoughts continually change from moment to moment, and that the thoughts about smoking will pass.",
+          "rating": 5
+        },
+        {
+          "id": "Cravings are like waves in the ocean - they come and go over time. They can be intense, but they will get smaller and eventually go away, just like waves.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "craving_post",
+      "strategies": [
+        {
+          "id": "Draw your attention to any feelings in your body that might be similar to what you feel when you want to smoke a cigarette. Tell yourself that these feelings are not forever, and that they will pass.",
+          "rating": 5
+        },
+        {
+          "id": "Whenever you have a craving to smoke, think of the craving like a wave in the ocean - it will come and go over time. It is temporary.",
+          "rating": 5
+        },
+        {
+          "id": "Notice how the clouds in the sky are constantly moving and never stay in the same place. Cravings are similar - they come and go. They are not permanent.",
+          "rating": 5
+        },
+        {
+          "id": "For the next few moments, notice any sensations in your body that may be similar to craving a cigarette. Describe these feelings to yourself, and know that it is ok to feel these sensations. They will weaken over time.",
+          "rating": 5
+        },
+        {
+          "id": "Be aware of what you tell yourself when you have a craving to smoke. Try not to judge these moments as good or bad, but instead tell yourself that they are a normal part of quitting smoking.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you're having any feelings in your body that are similar to a craving for a cigarette. Be aware of these sensations and know that they are temporary.",
+          "rating": 5
+        },
+        {
+          "id": "For the next several moments, be aware of any thoughts that are telling you to smoke a cigarette. Tell yourself that these thoughts are not commands to do something, but instead just words in your mind.",
+          "rating": 5
+        },
+        {
+          "id": "When you have a smoking urge, try to \"surf\" it. This means to be aware of the urge to smoke a cigarette, while also knowing that it will come and go just like a wave in the ocean.",
+          "rating": 5
+        },
+        {
+          "id": "Notice any thoughts you've had about smoking a cigarette. Be aware that our thoughts continually change from moment to moment, and that the thoughts about smoking will pass.",
+          "rating": 5
+        },
+        {
+          "id": "Cravings are like waves in the ocean - they come and go over time. They can be intense, but they will get smaller and eventually go away, just like waves.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "motivational_pre",
+      "strategies": [
+        {
+          "id": "You're doing a great job preparing to quit smoking!",
+          "rating": 5
+        },
+        {
+          "id": "You're taking the steps needed to be smoke-free. Congratulations!",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking is difficult, but you've made the right decision to get started!",
+          "rating": 5
+        },
+        {
+          "id": "Making the decision to quit smoking is the first step to becoming smoke-free. Keep up the good work!",
+          "rating": 5
+        },
+        {
+          "id": "As you prepare to quit smoking, think about all the reasons you want to become a nonsmoker.",
+          "rating": 5
+        },
+        {
+          "id": "You've made one of the best decisions for your health by choosing to quit smoking!",
+          "rating": 5
+        },
+        {
+          "id": "You're moving in the right direction by deciding to quit smoking. It will be challenging, but you can do it!",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking is one of the best things you can do for your health. Congratulations on making this big decision in your life!",
+          "rating": 5
+        },
+        {
+          "id": "You're doing everything you need to in order to quit smoking. Keep up the good work!",
+          "rating": 5
+        },
+        {
+          "id": "As quit day get closer, remind yourself of all the reasons you want to quit smoking - you save money, your health and energy will improve, your house and clothes will smell better, and your family and friends will be proud of you.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "motivational_post",
+      "strategies": [
+        {
+          "id": "Quitting smoking is difficult! Keep up the good work!",
+          "rating": 5
+        },
+        {
+          "id": "You're taking the steps you need to quit smoking - great job!",
+          "rating": 5
+        },
+        {
+          "id": "For the next few moments, remind yourself of the reasons you want to quit smoking.",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking is one of the most important things you can do for your health right now.",
+          "rating": 5
+        },
+        {
+          "id": "You're on the path to quitting smoking. You're doing a great job!",
+          "rating": 5
+        },
+        {
+          "id": "Whenever you feel the urge to smoke, remind yourself of all the hard work you've put into quitting.",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking is an uphill battle - keep climbing!",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking is hard work, but you're 100% capable of quitting!",
+          "rating": 5
+        },
+        {
+          "id": "You're doing a great job - keep moving towards your goal of quitting smoking!",
+          "rating": 5
+        },
+        {
+          "id": "Each moment you choose not to smoke is a step closer to reaching your goal.",
+          "rating": 5
+        },
+        {
+          "id": "You know you can do it - keep up the good work!",
+          "rating": 5
+        },
+        {
+          "id": "Every cigarette you don't work is money saved. Great job!",
+          "rating": 5
+        },
+        {
+          "id": "You got this. Keep moving towards your goal of being tobacco free.",
+          "rating": 5
+        },
+        {
+          "id": "Keep up the good work. Quitting is a process that takes time. Just concentrate on getting through today without a cigarette.",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking may be uncomfortable at times, but it will get easier! Your cravings will become less frequent and less intense the longer you go without smoking. Don't give up!",
+          "rating": 5
+        },
+        {
+          "id": "Don't forget to reward yourself each time you resist a craving. Calculate the money you are saving on cigarettes and use it to buy something nice for yourself.",
+          "rating": 5
+        },
+        {
+          "id": "Congratulations! You are taking control of your life! Be sure not to let temporary moments of weakness spoil all your hard work. Carry your computer with you at all times so that you always have access to the help you need.",
+          "rating": 5
+        },
+        {
+          "id": "Each time you resist the urge to smoke, you are one step closer to breaking your nicotine addiction. Keep it up!",
+          "rating": 5
+        },
+        {
+          "id": "Quitting is a process and takes time. Each hour you go without a cigarette is a step toward your freedom from nicotine. You're doing great!",
+          "rating": 5
+        },
+        {
+          "id": "Congratulations! Quitting smoking is hard, but you are doing it. Celebrate your success with your family and friends. They can be very supportive when you need it.",
+          "rating": 5
+        },
+        {
+          "id": "Don't forget that even if you have only quit for a day, you are a NONSMOKER now.",
+          "rating": 5
+        },
+        {
+          "id": "When times get tough, remind yourself that you are a nonsmoker now and don't need to smoke.",
+          "rating": 5
+        },
+        {
+          "id": "Think about all the positives of quitting smoking - you save money, your health and energy will improve, your house and clothes will smell better, and your family and friends will be proud of you . Good for you!",
+          "rating": 5
+        },
+        {
+          "id": "Take it one hour or day at a time. Just concentrate on getting through today without smoking.",
+          "rating": 5
+        },
+        {
+          "id": "Remember that each time you resist the urge to smoke, not smoking will get easier. Don't give in.",
+          "rating": 5
+        },
+        {
+          "id": "Remember that you are now in control of your life and you have decided that SMOKING IS NOT AN OPTION.",
+          "rating": 5
+        },
+        {
+          "id": "Tell yourself, I don't need a cigarette. There is nothing that it can do for me that I can't achieve in some other way.",
+          "rating": 5
+        },
+        {
+          "id": "Remember why you quit - it's bad for your health, costs a lot of money, and is bad for those around you.",
+          "rating": 5
+        },
+        {
+          "id": "Quitting smoking is hard, but you are doing it. Keep up the great work!",
+          "rating": 5
+        },
+        {
+          "id": "There will never be a \"perfect\" time to quit smoking, a time when you don't have any distractions or stress. Great job choosing to quit smoking now!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "lapse_postquit",
+      "strategies": [
+        {
+          "id": "Draw your attention to any thoughts you may be having about smoking. Remind yourself that you can get right back on track if you slipped off.",
+          "rating": 5
+        },
+        {
+          "id": "Any feelings that you're having right now are not forever. They will pass.",
+          "rating": 5
+        },
+        {
+          "id": "Each moment is new. Try to focus only on this present moment, and not let any thoughts about the past impact how you feel now.",
+          "rating": 5
+        },
+        {
+          "id": "It is easy to let our past influence our future behaviors. Draw your attention to this moment and focus only on your breathing. If any thoughts about the past come up, bring your attention back to your breath.",
+          "rating": 5
+        },
+        {
+          "id": "Be aware of what you tell yourself when you want to smoke a cigarette. Try not to judge these moments as good or bad, but instead tell yourself that they are a normal part of quitting smoking.",
+          "rating": 5
+        },
+        {
+          "id": "Notice any thoughts you've had about smoking a cigarette. Be aware that our thoughts continually change from moment to moment, and that the thoughts about smoking will pass.",
+          "rating": 5
+        },
+        {
+          "id": "Be present with what is happening right now, without trying to change anything (for example, your thoughts or mood). Try not to let the past impact your present.",
+          "rating": 5
+        },
+        {
+          "id": "Changing a behavior or habit is hard. Events in our lives aren't good or bad. Notice if you can suspend judgment.",
+          "rating": 5
+        },
+        {
+          "id": "For the next several moments, be aware of any thoughts about smoking a cigarette. Watch your thoughts and experience your emotions without judging them as right or wrong.",
+          "rating": 5
+        },
+        {
+          "id": "Try to let go of labeling things as good or bad. Be present with what is happening and suspend judgment.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you're having any judgments about the current moment. Try letting your current experience be, without calling it good or bad.",
+          "rating": 5
+        },
+        {
+          "id": "Sometimes we want things to be different than they are, as we often categorize our experiences as good or bad. Try not to judge things right now - just let the experience be as it is.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you are judging your current experience as good or bad, and know that quitting smoking is difficult. Try letting this moment be, without labeling it.",
+          "rating": 5
+        },
+        {
+          "id": "We don't have to judge everything as right or wrong. Try letting things be without labeling them.",
+          "rating": 5
+        },
+        {
+          "id": "Notice if you want things to be different than they are right now. Try to be present, without trying to change anything.",
+          "rating": 5
+        },
+        {
+          "id": "If possible, let go of any judgments that are good or bad right now. Every moment is new, so focus on just this moment.",
+          "rating": 5
+        }
+      ]
+    }
+  ]
+}

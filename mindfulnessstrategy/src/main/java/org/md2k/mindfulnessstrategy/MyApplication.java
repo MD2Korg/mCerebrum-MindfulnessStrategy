@@ -1,4 +1,12 @@
 package org.md2k.mindfulnessstrategy;
+
+import android.app.Application;
+import android.content.Context;
+
+import com.beardedhen.androidbootstrap.TypefaceProvider;
+
+import org.md2k.mcerebrum.core.access.MCerebrum;
+
 /*
  * Copyright (c) 2016, The University of Memphis, MD2K Center
  * - Syed Monowar Hossain <monowar.hossain@gmail.com>
@@ -26,33 +34,16 @@ package org.md2k.mindfulnessstrategy;
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import android.support.v7.app.AppCompatActivity;
-
-import org.md2k.datakitapi.exception.DataKitException;
-import org.md2k.datakitapi.messagehandler.OnConnectionListener;
-import org.md2k.mindfulnessstrategy.datakit.DataKitManager;
-
-public class ActivityAccess extends AppCompatActivity{
-/*
-    DataKitManager dataKitManager;
+public class MyApplication extends Application {
+    static Context context;
     @Override
-    public boolean prepare() {
-        dataKitManager=new DataKitManager(this);
-        try {
-            dataKitManager.connect(new OnConnectionListener() {
-                @Override
-                public void onConnected() {
-                    try {
-                        dataKitManager.registerAll();
-                        dataKitManager.disconnect();
-                    } catch (DataKitException ignored) {
-                    }
-                }
-            });
-        } catch (DataKitException e) {
-            e.printStackTrace();
-        }
-        return false;
+    public void onCreate() {
+        super.onCreate();
+        context=getApplicationContext();
+        MCerebrum.init(getApplicationContext(), MyMCerebrumInit.class);
+        TypefaceProvider.registerDefaultIconSets();
     }
-*/
+    public static Context getContext(){
+        return context;
+    }
 }

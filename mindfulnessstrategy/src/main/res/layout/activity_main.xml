@@ -33,6 +33,17 @@
     <View
         android:layout_width="wrap_content"
         android:layout_height="20dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Frequently asked question"
+        android:id="@+id/button_faq"
+        android:gravity="center_vertical" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
 
     <Button
         android:layout_width="match_parent"

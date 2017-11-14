@@ -31,7 +31,7 @@ import android.os.Environment;
 
 import com.google.gson.Gson;
 
-import org.md2k.utilities.FileManager;
+import org.md2k.mcerebrum.commons.storage.Storage;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -41,12 +41,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class CategoryManager {
-    private static final String DIRECTORY = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mCerebrum/org.md2k.mindfulnessstrategy/";
-    private static final String FILENAME = "strategy.json";
+    private static String DIRECTORY;
+    private static String FILENAME;
 
     private Categories categories;
 
     public CategoryManager(Context context) throws IOException {
+        DIRECTORY = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mCerebrum/org.md2k.mindfulnessstrategy/";
+        FILENAME = "strategy.json";
         read(context);
     }
     public Category getCategoryRandom(String type, boolean isPreQuit, boolean isLapse){
@@ -86,15 +88,14 @@ public class CategoryManager {
     }
     private void read(Context context) throws IOException {
         try {
-            categories =  FileManager.readJSON(DIRECTORY, FILENAME, Categories.class);
+            categories =  Storage.readJson(DIRECTORY+FILENAME, Categories.class);
             if(categories==null) throw new FileNotFoundException();
         } catch (FileNotFoundException e) {
             categories = readDefault(context);
-            FileManager.writeJSON(DIRECTORY, FILENAME, categories);
+            Storage.writeJson(DIRECTORY+FILENAME, categories);
         }
     }
     public void write() throws IOException {
-
-        FileManager.writeJSON(DIRECTORY, FILENAME, categories);
+        Storage.writeJson(DIRECTORY+FILENAME, categories);
     }
 }

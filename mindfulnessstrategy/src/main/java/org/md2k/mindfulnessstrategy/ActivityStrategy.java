@@ -10,16 +10,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.beardedhen.androidbootstrap.AwesomeTextView;
+import com.beardedhen.androidbootstrap.BootstrapButton;
 
 import org.md2k.datakitapi.exception.DataKitException;
 import org.md2k.datakitapi.messagehandler.OnConnectionListener;
+import org.md2k.mcerebrum.commons.dialog.Dialog;
+import org.md2k.mcerebrum.commons.dialog.DialogCallback;
 import org.md2k.mindfulnessstrategy.data.DataManager;
 import org.md2k.mindfulnessstrategy.datakit.DataKitManager;
 import org.md2k.mindfulnessstrategy.strategy.Category;
 import org.md2k.mindfulnessstrategy.strategy.CategoryManager;
 import org.md2k.mindfulnessstrategy.strategy.Strategy;
-import org.md2k.utilities.dialog.Dialog;
-import org.md2k.utilities.dialog.DialogCallback;
 
 import java.io.IOException;
 import java.util.Random;
@@ -42,6 +44,7 @@ public class ActivityStrategy extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         trigger_type = getIntent().getStringExtra("trigger_type");
         if(!trigger_type.equals("USER")){
             Random random=new Random();
@@ -49,11 +52,11 @@ public class ActivityStrategy extends Activity {
             if(v==1) isDoNothing=true;
         }
         try {
-            if(isDoNothing) {
+            categoryManager = new CategoryManager(this);
+            if(!isDoNothing) {
                 setContentView(R.layout.activity_strategy);
-                materialDialog = new Dialog().ProgressIndeterminate(this, null, "Loading...").build();
+                materialDialog = Dialog.progressIndeterminate(this, "Loading...").build();
                 materialDialog.show();
-                categoryManager = new CategoryManager(this);
                 handler = new Handler();
             }
             dataKitManager=new DataKitManager(this);
@@ -89,7 +92,9 @@ public class ActivityStrategy extends Activity {
     }
 
     private void setTextMessage(String message) {
-        ((TextView) findViewById(R.id.text_view_message)).setText(message);
+        AwesomeTextView bt = (AwesomeTextView) findViewById(R.id.text_view_message);
+        bt.setText(message);
+//        ((TextView) findViewById(R.id.text_view_message)).setText(message);
     }
 
     private void setButtonYes() {
@@ -223,6 +228,19 @@ public class ActivityStrategy extends Activity {
         public void run() {
             Dialog dialog = new Dialog();
             dataManager.add("NOTIFY_DIALOG_SHOW", "No response in last 5 minutes. Ask whether the strategy is completed with YES/No option");
+            Dialog.simple(ActivityStrategy.this, "Complete Strategy?", "Did you complete the strategy just sent to you?", "Yes", "No", new DialogCallback() {
+                @Override
+                public void onSelected(String value) {
+                    if("Yes".equals(value)){
+                        dataManager.add("NOTIFY_DIALOG_RESPONSE","I completed the strategy");
+                        complete();
+                    }else{
+                        dataManager.add("NOTIFY_DIALOG_RESPONSE","I did not complete the strategy");
+                        notComplete();
+                    }
+                }
+            });
+/*
             materialDialog = dialog.Question(ActivityStrategy.this, "Complete Strategy?", "Did you complete the strategy just sent to you?", new String[]{"Yes", "No"}, new DialogCallback() {
                 @Override
                 public void onDialogCallback(Dialog.DialogResponse which, String[] result) {
@@ -236,6 +254,7 @@ public class ActivityStrategy extends Activity {
                     }
                 }
             }).build();
+*/
             materialDialog.show();
             handler.postDelayed(runnableQuit, QUIT_LIMIT);
         }
