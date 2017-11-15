@@ -56,7 +56,7 @@ public class ActivityMain extends Activity {
                 finish();
             }
         });
-        button = (Button) findViewById(R.id.button_faq);
+     /*   button = (Button) findViewById(R.id.button_faq);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +64,7 @@ public class ActivityMain extends Activity {
                 startActivity(intent);
             }
         });
-
+*/
         button = (Button) findViewById(R.id.button_exit);
 
         button.setOnClickListener(new View.OnClickListener() {

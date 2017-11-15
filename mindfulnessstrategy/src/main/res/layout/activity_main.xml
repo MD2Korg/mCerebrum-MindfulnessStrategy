@@ -29,7 +29,7 @@
         android:text="Send me a mindfulness strategy to practice!"
         android:id="@+id/button_practice"
         android:gravity="center_vertical" />
-
+<!--
     <View
         android:layout_width="wrap_content"
         android:layout_height="20dp" />
@@ -39,7 +39,7 @@
         android:textAlignment="center"
         android:text="Frequently asked question"
         android:id="@+id/button_faq"
-        android:gravity="center_vertical" />
+        android:gravity="center_vertical" />-->
 
     <View
         android:layout_width="wrap_content"
