@@ -17,6 +17,7 @@ import org.md2k.datakitapi.exception.DataKitException;
 import org.md2k.datakitapi.messagehandler.OnConnectionListener;
 import org.md2k.mcerebrum.commons.dialog.Dialog;
 import org.md2k.mcerebrum.commons.dialog.DialogCallback;
+import org.md2k.mindfulnessstrategy.broadcast.BroadcastSend;
 import org.md2k.mindfulnessstrategy.data.DataManager;
 import org.md2k.mindfulnessstrategy.datakit.DataKitManager;
 import org.md2k.mindfulnessstrategy.strategy.Category;
@@ -44,7 +45,7 @@ public class ActivityStrategy extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        handler = new Handler();
         trigger_type = getIntent().getStringExtra("trigger_type");
         if(!trigger_type.equals("USER")){
             Random random=new Random();
@@ -287,5 +288,10 @@ public class ActivityStrategy extends Activity {
 
         }
         finish();
+    }
+    @Override
+    public void onDestroy(){
+        BroadcastSend.result(this, "COMPLETED");
+        super.onDestroy();
     }
 }

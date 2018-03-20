@@ -29,10 +29,14 @@ package org.md2k.mindfulnessstrategy.strategy;
 import java.util.ArrayList;
 
 class Categories {
-    private static final String TYPE_STRESS_LOW = "STRESS_LOW";
-    private static final String TYPE_STRESS_HIGH = "STRESS_HIGH";
+    private static final String TYPE_STRESS = "STRESS";
+    private static final String TYPE_SMOKING = "STRESS";
+/*
+    private static final String TYPE_STRESS_LOW = "LOW_STRESS";
+    private static final String TYPE_STRESS_HIGH = "HIGH_STRESS";
     private static final String TYPE_SMOKING = "SMOKING";
     private static final String TYPE_NOT_SMOKING = "NOT_SMOKING";
+*/
     private static final String TYPE_USER="USER";
 
     private static final String B = "breath";
@@ -73,9 +77,9 @@ class Categories {
         ArrayList<Category> result=new ArrayList<>();
         if(type==null)
             categories=getCategoriesDefault(isPreQuit);
-        else if (TYPE_STRESS_HIGH.equals(type) || TYPE_STRESS_LOW.equals(type)) {
+        else if (TYPE_STRESS.equals(type)) {
             categories = getCategoriesStress(isPreQuit);
-        } else if (TYPE_SMOKING.equals(type) || TYPE_NOT_SMOKING.equals(type)) {
+        } else if (TYPE_SMOKING.equals(type)) {
             categories = getCategoriesSmoking(isPreQuit, isLapse);
         } else  if(TYPE_USER.equals(type)){
             categories = getCategoriesUser(isPreQuit);
