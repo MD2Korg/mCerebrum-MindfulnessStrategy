@@ -178,7 +178,7 @@ public class ActivityStrategy extends Activity {
         findViewById(R.id.layout_same).setVisibility(View.GONE);
         findViewById(R.id.layout_likert).setVisibility(View.VISIBLE);
         findViewById(R.id.ratingBar).setVisibility(View.GONE);
-        setTextMessage("That's ok! You'll receive another strategy to try later!");
+        setTextMessage("That's ok! You can always try another strategy later.");
         quitForResponse();
     }
 
