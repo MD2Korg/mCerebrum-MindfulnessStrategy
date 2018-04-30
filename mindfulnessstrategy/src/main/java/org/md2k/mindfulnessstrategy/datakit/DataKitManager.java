@@ -80,7 +80,8 @@ public class DataKitManager {
         DataTypeLong dataTypeLong= (DataTypeLong) dataType.get(0);
         long startTime=dataTypeLong.getSample();
         long endTime=DateTime.getDateTime();
-        dataSourceBuilder=new DataSourceBuilder().setType("SMOKING").setId("PUFF_MARKER");
+        if(endTime-startTime>=48*60*60*1000L) startTime = endTime-48*60*60*1000L;
+        dataSourceBuilder=new DataSourceBuilder().setType("PUFFMARKER_SMOKING_EPISODE");
         dataSourceClient = dataKitAPI.find(dataSourceBuilder);
         if(dataSourceClient.size()==0) return false;
         dataType = dataKitAPI.query(dataSourceClient.get(0), startTime, endTime);

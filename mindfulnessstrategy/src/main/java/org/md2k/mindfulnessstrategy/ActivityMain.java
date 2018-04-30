@@ -34,6 +34,7 @@ public class ActivityMain extends Activity {
                     if(getIntent().getStringExtra("trigger_type")!=null){
                         Intent intent=new Intent(ActivityMain.this, ActivityStrategy.class);
                         intent.putExtra("trigger_type",getIntent().getStringExtra("trigger_type"));
+                        intent.putExtra("trigger",getIntent().getStringExtra("trigger"));
                         startActivity(intent);
                         finish();
                     }else {

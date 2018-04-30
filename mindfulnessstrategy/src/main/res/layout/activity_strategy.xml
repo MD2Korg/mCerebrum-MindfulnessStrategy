@@ -97,18 +97,18 @@
             android:weightSum="1"
             android:layout_height="wrap_content">
             <Button
-                android:id="@+id/button_not_complete"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:layout_gravity="center_horizontal|center"
-                android:text="I did not complete the strategy"
-                android:layout_width="match_parent" />
-            <Button
                 android:id="@+id/button_complete"
                 android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center"
                 android:text="I completed the strategy"
+                android:layout_width="match_parent" />
+            <Button
+                android:id="@+id/button_not_complete"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_gravity="center_horizontal|center"
+                android:text="I did not complete the strategy"
                 android:layout_width="match_parent" />
 
         </LinearLayout>

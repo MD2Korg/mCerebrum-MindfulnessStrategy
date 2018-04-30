@@ -41,17 +41,24 @@ public class ActivityStrategy extends Activity {
     DataKitManager dataKitManager;
     DataManager dataManager;
     boolean isDoNothing=false;
+    String trigger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         handler = new Handler();
         trigger_type = getIntent().getStringExtra("trigger_type");
+        trigger = getIntent().getStringExtra("trigger");
+        if(trigger!=null && trigger.equals("NO"))
+            isDoNothing=true;
+
+/*
         if(!trigger_type.equals("USER")){
             Random random=new Random();
             int v = random.nextInt(2);
             if(v==1) isDoNothing=true;
         }
+*/
         try {
             categoryManager = new CategoryManager(this);
             if(!isDoNothing) {
