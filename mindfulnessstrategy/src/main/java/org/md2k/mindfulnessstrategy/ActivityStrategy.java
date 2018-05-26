@@ -42,10 +42,12 @@ public class ActivityStrategy extends Activity {
     DataManager dataManager;
     boolean isDoNothing=false;
     String trigger;
+    int showCount=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        showCount=0;
         handler = new Handler();
         trigger_type = getIntent().getStringExtra("trigger_type");
         trigger = getIntent().getStringExtra("trigger");
@@ -106,7 +108,9 @@ public class ActivityStrategy extends Activity {
     }
 
     private void setButtonYes() {
-        Button buttonYes = (Button) findViewById(R.id.button_yes);
+        final Button buttonYes = (Button) findViewById(R.id.button_yes);
+        if(showCount>=1) buttonYes.setEnabled(false);
+        else buttonYes.setEnabled(true);
         buttonYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,6 +119,9 @@ public class ActivityStrategy extends Activity {
                 findViewById(R.id.layout_different).setVisibility(View.VISIBLE);
                 findViewById(R.id.layout_same).setVisibility(View.GONE);
                 findViewById(R.id.layout_likert).setVisibility(View.GONE);
+                showCount++;
+                if(showCount>=2) buttonYes.setEnabled(false);
+                else buttonYes.setEnabled(true);
                 waitForResponse();
             }
         });
@@ -128,6 +135,15 @@ public class ActivityStrategy extends Activity {
                 dataManager.add("USER_RESPONSE","Would you like a different strategy than the one you see here? - Response: NO");
                 findViewById(R.id.layout_different).setVisibility(View.GONE);
                 findViewById(R.id.layout_same).setVisibility(View.VISIBLE);
+                Button buttonComplete = (Button) findViewById(R.id.button_complete);
+                Button buttonNotComplete = (Button) findViewById(R.id.button_not_complete);
+                if(category.getId().equals("motivational_pre")||category.getId().equals("motivational_post")){
+                    buttonComplete.setText("That was helpful!");
+                    buttonNotComplete.setText("That was not helpful.");
+                }else{
+                    buttonComplete.setText("I completed the strategy.");
+                    buttonNotComplete.setText("I did not complete the strategy.");
+                }
                 findViewById(R.id.layout_likert).setVisibility(View.GONE);
                 waitForResponse();
             }
@@ -140,13 +156,15 @@ public class ActivityStrategy extends Activity {
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float ratings, boolean fromUser) {
-                rating = ratings;
+                if(ratings>0)
+                    rating = ratings;
+                else rating = -1;
             }
         });
         buttonClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(rating!=-1){
+                if(rating>=0){
                     dataManager.add("RATING",category.getId(), strategy.getId(), rating);
                     try {
                         strategy.setRating(rating);
@@ -154,8 +172,21 @@ public class ActivityStrategy extends Activity {
                     } catch (IOException ignored) {
 
                     }
-                }
-                quit();
+                    quit();
+                }else if(rating==-1){
+                    String content;
+                    if(category.getId().equals("motivational_pre")||category.getId().equals("motivational_post")){
+                        content = "Please rate the statement you just saw.";
+                    }else
+                        content="Please rate the strategy you just completed.";
+                    Dialog.simple(ActivityStrategy.this, "Rating", content, "Ok", null, new DialogCallback() {
+                        @Override
+                        public void onSelected(String value) {
+
+                        }
+                    }).show();
+                }else
+                    quit();
             }
         });
 
@@ -176,7 +207,11 @@ public class ActivityStrategy extends Activity {
         findViewById(R.id.layout_same).setVisibility(View.GONE);
         findViewById(R.id.layout_likert).setVisibility(View.VISIBLE);
         findViewById(R.id.ratingBar).setVisibility(View.VISIBLE);
-        setTextMessage("Great job! Try to use the strategy you just completed throughout your day. Please rate the strategy you just completed.");
+        if(category.getId().equals("motivational_pre")||category.getId().equals("motivational_post")) {
+            setTextMessage("Good job! Please rate the statement you just saw.");
+        }else {
+            setTextMessage("Good job! Try to use the strategy you just completed throughout your day. Please rate the strategy you just completed.");
+        }
         quitForResponse();
 
     }
@@ -186,6 +221,7 @@ public class ActivityStrategy extends Activity {
         findViewById(R.id.layout_likert).setVisibility(View.VISIBLE);
         findViewById(R.id.ratingBar).setVisibility(View.GONE);
         setTextMessage("That's ok! You can always try another strategy later.");
+        rating=-2;
         quitForResponse();
     }
 
@@ -270,7 +306,6 @@ public class ActivityStrategy extends Activity {
     Runnable runnableQuit = new Runnable() {
         @Override
         public void run() {
-            if (materialDialog != null) materialDialog.show();
             quit();
         }
     };
@@ -286,6 +321,7 @@ public class ActivityStrategy extends Activity {
     }
 
     void quit(){
+        
         try {
             handler.removeCallbacks(runnableQuit);
             handler.removeCallbacks(runnableWait);
