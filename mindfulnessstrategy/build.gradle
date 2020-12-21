@@ -1,4 +1,4 @@
-version = '2.0.9'
+version = '2.0.10'
 apply plugin: 'com.android.application'
 apply from: 'versioning.gradle'
 
@@ -30,11 +30,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+/*
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
                     output.outputFile = new File(output.outputFile.parent, output.outputFile.name.replace("-release", "${variant.versionName}"))
                 }
             }
+*/
         }
     }
     lintOptions {
@@ -55,5 +57,10 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    // button
+    implementation 'com.github.medyo:fancybuttons:1.8.4'
+    implementation 'com.beardedhen:androidbootstrap:2.3.1'
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
+    implementation 'com.google.code.gson:gson:2.8.2'
     testCompile 'junit:junit:4.12'
 }

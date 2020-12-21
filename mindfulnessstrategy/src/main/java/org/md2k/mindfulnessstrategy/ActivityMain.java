@@ -12,7 +12,6 @@ import android.widget.Toast;
 import org.md2k.mcerebrum.commons.permission.Permission;
 import org.md2k.mcerebrum.commons.permission.PermissionCallback;
 
-import es.dmoral.toasty.Toasty;
 
 public class ActivityMain extends Activity {
 
@@ -28,7 +27,7 @@ public class ActivityMain extends Activity {
                 editor.putBoolean("permission", isGranted);
                 editor.apply();
                 if (!isGranted) {
-                    Toasty.error(getApplicationContext(), "!PERMISSION DENIED !!! Could not continue...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "!PERMISSION DENIED !!! Could not continue...", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
                     if(getIntent().getStringExtra("trigger_type")!=null){
